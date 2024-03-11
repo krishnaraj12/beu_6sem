@@ -1,122 +1,364 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BEU 6th Semester Results</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.:BEU, Patna - Results.</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <!-- <style>
+        /* Add any custom styles here */
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .table {
+            background-color: #fff;
+        }
+
+        .style1 {
+            margin-bottom: 10px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        /* Print button styles */
+        .print-btn {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .print-btn:hover {
+            background-color: #0056b3;
+        }
+    </style> -->
+
 <style>
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #e8ffd8;
-    padding: 20px;
-  }
-
-  h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-  #cover {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #ff7575;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1),
-    #ffffffeb;
-
-
-  }
-
-  form {
-    text-align: center;
-  }
-
-  input[type="text"] {
-    width: calc(100% - 40px);
-    height: 40px;
-    padding: 5px 10px;
-    margin-bottom: 20px;
-    border: 2px solid #fff;
-    border-radius: 5px;
-    background-color: transparent;
-    color: #fff;
-    font-size: 16px;
-    outline: none;
-  }
-
-  input[type="text"]::placeholder {
-    color: #ffffff;
-  }
-
-  button {
-    width: 100%;
-    height: 40px;
-    border: none;
-    border-radius: 5px;
-    background-color: #fff;
-    color: #ff7575;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  
-button span {
-  position: absolute;
-  top: 68px;
-  left: 43px;
-  display: block;
-  width: 45px;
-  height: 15px;
-  background-color: transparent;
-  border-radius: 10px;
-  transform: rotateZ(52deg);
-  transition: 0.5s ease all;
+    /* Add any custom styles here */
+body {
+    background-color: #f8f9fa;
 }
-  
 
-  button:hover {
-    background-color: #ff9999;
-    color: #fff;
-  }
-
-  footer {
-    text-align: center;
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
-  }
+}
 
-  footer p {
-    color: #666;
-  }
+.table {
+    background-color: #fff;
+}
 
-  footer a {
-    color: #ff7575;
-    text-decoration: none;
-  }
+.style1 {
+    margin-bottom: 10px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Print button styles */
+.print-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.print-btn:hover {
+    background-color: #0056b3;
+}
+
+.card-container {
+    width: 300px;
+    padding: 20px;
+    perspective: 1000px;
+}
+
+.card-container:hover .card {
+    background-position: -100px 100px, -100px 100px;
+    transform: rotate3d(0.5, 1, 0, 30deg);
+}
+
+.content-container {
+    background: rgba(4, 193, 250, 0.732);
+    transition: all 0.5s ease-in-out;
+    padding: 60px 25px 25px 25px;
+    transform-style: preserve-3d;
+}
+
+.content-container .card-title {
+    display: inline-block;
+    color: white;
+    font-size: 25px;
+    font-weight: 900;
+    transition: all 0.5s ease-in-out;
+    transform: translate3d(0px, 0px, 50px);
+}
+
+.content-container .card-title:hover {
+    transform: translate3d(0px, 0px, 60px);
+}
+
+.content-container .card-content {
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #f2f2f2;
+    transition: all 0.5s ease-in-out;
+    transform: translate3d(0px, 0px, 30px);
+}
+
+.content-container .card-content:hover {
+    transform: translate3d(0px, 0px, 60px);
+}
+
+.see-more-btn {
+    cursor: pointer;
+    margin-top: 1rem;
+    display: inline-block;
+    font-weight: 900;
+    font-size: 9px;
+    text-transform: uppercase;
+    color: rgb(7, 185, 255);
+    background: white;
+    padding: 0.5rem 0.7rem;
+    transition: all 0.5s ease-in-out;
+    transform: translate3d(0px, 0px, 20px);
+}
+
+.see-more-btn:hover {
+    transform: translate3d(0px, 0px, 60px);
+}
+
+.date-info {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    height: 60px;
+    width: 60px;
+    background: white;
+    border: 1px solid rgb(7, 185, 255);
+    padding: 10px;
+    transform: translate3d(0px, 0px, 80px);
+    box-shadow: rgba(24, 24, 156, 0.2) 0px 17px 10px -10px;
+}
+
+.date-info span {
+    display: block;
+    text-align: center;
+}
+
+.date-info .month {
+    color: rgb(4, 193, 250);
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.date-info .date {
+    font-size: 20px;
+    font-weight: 900;
+    color: rgb(4, 193, 250);
+}
+
 </style>
+    
+    
 </head>
 <body>
+  
+<div class="container">
 
-<h2>BEU 6th Semester Results</h2>
 
-<div id="cover">
-  <form action="/scrape">
-    <input type="text" name="registrationNumber" placeholder="Enter Registration Number" required>
-    <button type="submit">Submit</button>
-  </form>
+    <div class="card">
+        
+            
+            <form name="form1" method="post" action="" id="form1">
+                <!-- Your existing form content goes here -->
+                <!-- Bootstrap classes can be added to your existing elements -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="text-center mt-4">Bihar Engineering University, Patna</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="text-center mt-3">B.Tech. 6<sup>th</sup> Semester Examination, 2023</h3>
+                    </div>
+                </div>
+                <div class="container">
+                    <form name="form1" method="post" action="" id="form1">
+                        <div class="table-wrapper">
+                            <table cellspacing="0" rules="all" border="1" style="width:910px;border-collapse:collapse;"></table>
+                        </div>
+                
+                        <div class="style1">
+                            <strong>Semester : </strong><span>VI</span>
+                        </div>
+                        <div class="style1">
+                            <strong>Examination(Month/Year) : </strong>November/2023
+                        </div>
+                        
+                        <div class="table-wrapper">
+                            <table cellspacing="0" rules="all" border="1" style="width:100%;border-collapse:collapse;">
+                                <tr>
+                                    <td>
+                                        <div class="style1">
+                                            <b>Registration No:</b>
+                                            <span style="font-weight: 700"><%= studentInfo.registration_number %></span>
+                                        </div>
+                                        <div class="style1">
+                                            <b>Student Name:</b>
+                                            <span style="font-weight: 700"><%= studentInfo.student_name %></span>
+                                        </div>
+                                        <div class="style1">
+                                            <b>Father Name:</b>
+                                            <span><%=  studentInfo.student_father%></span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="style1">
+                                            <strong>Mother Name:</strong>
+                                            <span><%= studentInfo.student_mother %></span>
+                                        </div>
+                                        <div class="style1">
+                                            <b>College Name:</b>
+                                            <span><%= studentInfo.student_collge %></span>
+                                            
+                                        </div>
+                                        <div class="style1">
+                                            <b>Course Name:</b>
+                                            <span><%= studentInfo.student_branch %></span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </form>
+                </div>
+                
+            
+
+            </div>
+        <!-- Display Theory Subjects Information -->
+        <h6>Theory Subjects</h6>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Subject Code</th>
+                    <th>Subject Name</th>
+                    <th>ESE</th>
+                    <th>IA</th>
+                    <th>Total</th>
+                    <th>Grade</th>
+                    <th>Credit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% studentInfo.theory_subjects_info.forEach(subject => { %>
+                    <tr>
+                        <td><%= subject.subject_code %></td>
+                        <td><%= subject.subject_name %></td>
+                        <td><%= subject.ese_marks %></td>
+                        <td><%= subject.ia_marks %></td>
+                        <td><%= subject.total_marks %></td>
+                        <td><%= subject.grade %></td>
+                        <td><%= subject.credit %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+        <!-- Display Practical Subjects Information -->
+        <h6>Theory Subjects</h6>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Subject Code</th>
+                    <th scope="col">Subject Name</th>
+                    <th scope="col">ESE</th>
+                    <th scope="col">IA</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Grade</th>
+                    <th scope="col">Credit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% studentInfo.practical_subjects_info.forEach(subject => { %>
+                    <tr>
+                        <td><%= subject.subject_code %></td>
+                        <td><%= subject.subject_name %></td>
+                        <td><%= subject.ese_marks %></td>
+                        <td><%= subject.ia_marks %></td>
+                        <td><%= subject.total_marks %></td>
+                        <td><%= subject.grade %></td>
+                        <td><%= subject.credit %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+
+        <!-- Display Practical Subjects Information -->
+        <h6>Practical Subjects</h6>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>I</th>
+                    <th>II</th>
+                    <th>III</th>
+                    <th>IV</th>
+                    <th>V</th>
+                    <th>VI</th>
+                    <th>VII</th>
+                    <th>VIII</th>
+                    <th>Cur. CGPA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% studentInfo.practical_subjects_info2.forEach(subject => { %>
+                    <tr>
+                        <% Object.entries(subject).forEach(([key, value]) => { %>
+                            <td><%= value %></td>
+                        <% }); %>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+
+        <h3>SGPA: <%= studentInfo.sgpa %></h3>
+
+    </div>
+
 </div>
+    <!-- Print button -->
+    <button class="print-btn btn btn-primary" onclick="window.print()">Print Result</button>
 
-<footer>
-  <p>Created by <a href="https://www.google.com/search?sca_esv=cfa97c458ab2bfe3&rlz=1C1YTUH_enIN1066IN1066&sxsrf=ACQVn08fQDm7Mg3S1csw46j7p43ZT-2TRQ:1710182730875&q=KRISHNA+RAJ&stick=H4sIAAAAAAAAAOOwesRoyi3w8sc9YSmdSWtOXmNU4-IJSC0qzs8LTk0sSs4QEuNic80rySypFOKR4uLiKM7yrAwwDK_kWcTK7R3kGezh56gQ5OgFANnvUBlIAAAA&sa=X&ved=2ahUKEwjnt7KR7-yEAxU3TmwGHXpKCMwQnJoFegQIMBAH&biw=1536&bih=742&dpr=1.25">Krishna Raj</a>.</p>
-</footer>
-
+    <!-- Include Bootstrap JS (optional) -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
