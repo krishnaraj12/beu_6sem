@@ -1,87 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BEU 6th Semester Results</title>
 <style>
-    .input__container {
-        position: relative;
-        background: rgba(255, 255, 255, 0.664);
-        padding: 50px 15px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 5px;
-        border-radius: 22px;
-        max-width: 300px;
-        transition: transform 400ms;
-        transform-style: preserve-3d;
-        transform: rotateX(15deg) rotateY(-20deg);
-        perspective: 500px;
-        margin: 0 auto; /* Added center alignment */
-    }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-    .shadow__input {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        left: 10;
-        bottom: 0;
-        z-index: -1;
-        filter: blur(30px);
-        border-radius: 20px;
-        background-color: #999cff;
-        background-image: radial-gradient(at 85% 51%, hsla(60,60%,61%,1) 0px, transparent 50%),
-            radial-gradient(at 74% 68%, hsla(235,69%,77%,1) 0px, transparent 50%),
-            radial-gradient(at 64% 79%, hsla(284,72%,73%,1) 0px, transparent 50%),
-            radial-gradient(at 75% 16%, hsla(283,60%,72%,1) 0px, transparent 50%),
-            radial-gradient(at 90% 65%, hsla(153,70%,64%,1) 0px, transparent 50%),
-            radial-gradient(at 91% 83%, hsla(283,74%,69%,1) 0px, transparent 50%),
-            radial-gradient(at 72% 91%, hsla(213,75%,75%,1) 0px, transparent 50%);
-    }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #e8ffd8;
+    padding: 20px;
+  }
 
-    .input__button__shadow {
-        cursor: pointer;
-        border: none;
-        background: none;
-        transition: transform 400ms, background 400ms;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 12px;
-        padding: 5px;
-    }
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
 
-    .input__button__shadow:hover {
-        background: rgba(255, 255, 255, 0.411);
-    }
+  #cover {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ff7575;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1),
+    #ffffffeb;
 
-    .input__search {
-        width: 100%;
-        border-radius: 20px;
-        outline: none;
-        border: none;
-        padding: 8px;
-        position: relative;
-    }
 
-    /* Media Queries */
-    @media (max-width: 768px) {
-        .input__container {
-            max-width: 100%;
-            transform: none;
-            perspective: none;
-        }
-    }
+  }
+
+  form {
+    text-align: center;
+  }
+
+  input[type="text"] {
+    width: calc(100% - 40px);
+    height: 40px;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+  }
+
+  input[type="text"]::placeholder {
+    color: #ffffff;
+  }
+
+  button {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #ff7575;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  
+button span {
+  position: absolute;
+  top: 68px;
+  left: 43px;
+  display: block;
+  width: 45px;
+  height: 15px;
+  background-color: transparent;
+  border-radius: 10px;
+  transform: rotateZ(52deg);
+  transition: 0.5s ease all;
+}
+  
+
+  button:hover {
+    background-color: #ff9999;
+    color: #fff;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  footer p {
+    color: #666;
+  }
+
+  footer a {
+    color: #ff7575;
+    text-decoration: none;
+  }
 </style>
+</head>
+<body>
 
-<form action="/scrape" class="form-inline">
-    <div class="input__container">
-        <div class="shadow__input"></div>
-        <button class="input__button__shadow">
-            <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" height="20px" width="20px">
-                <path
-                    d="M4 9a5 5 0 1110 0A5 5 0 014 9zm5-7a7 7 0 104.2 12.6.999.999 0 00.093.107l3 3a1 1 0 001.414-1.414l-3-3a.999.999 0 00-.107-.093A7 7 0 009 2z"
-                    fill-rule="evenodd" fill="#17202A"></path>
-            </svg>
-        </button>
+<h2>BEU 6th Semester Results</h2>
 
-        <input type="text" name="registrationNumber" class="input__search" placeholder="What do you want to search?">
-    </div>
-</form>
+<div id="cover">
+  <form action="/scrape">
+    <input type="text" name="registrationNumber" placeholder="Enter Registration Number" required>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+<footer>
+  <p>Created by <a href="https://www.google.com/search?sca_esv=cfa97c458ab2bfe3&rlz=1C1YTUH_enIN1066IN1066&sxsrf=ACQVn08fQDm7Mg3S1csw46j7p43ZT-2TRQ:1710182730875&q=KRISHNA+RAJ&stick=H4sIAAAAAAAAAOOwesRoyi3w8sc9YSmdSWtOXmNU4-IJSC0qzs8LTk0sSs4QEuNic80rySypFOKR4uLiKM7yrAwwDK_kWcTK7R3kGezh56gQ5OgFANnvUBlIAAAA&sa=X&ved=2ahUKEwjnt7KR7-yEAxU3TmwGHXpKCMwQnJoFegQIMBAH&biw=1536&bih=742&dpr=1.25">Krishna Raj</a>.</p>
+</footer>
+
+</body>
+</html>
